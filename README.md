@@ -1,4 +1,4 @@
-# How-to-Bind-JSON--Excel--and-CSV-Data-to-.NET-MAUI-Sparkline-Charts
+# How to Bind JSON, Excel and CSV Data to .NET MAUI Sparkline Charts
 This sample demonstrates how to bind data from JSON, Excel, and CSV sources to Syncfusion’s SfSparkChart controls in a .NET MAUI application. Visualize data from multiple formats with minimal code using SparkLine, SparkArea, and SparkColumn charts.
 
 ## What You'll Learn
@@ -16,7 +16,11 @@ This sample demonstrates how to bind data from JSON, Excel, and CSV sources to S
 - Works cross-platform on Android, iOS, Windows, and MacCatalyst.
 
 ## Output
+
 Bind and display JSON, CSV, and Excel data in three different SparkCharts:
+
+<img width="1890" height="900" alt="image" src="https://github.com/user-attachments/assets/30242db9-dcb9-4ac2-bed6-faa41f73f4f3" />
+
 
 - Line chart for JSON data (e.g., sales)
 - Area chart for CSV data (e.g., revenue)
@@ -31,4 +35,4 @@ Bind and display JSON, CSV, and Excel data in three different SparkCharts:
 ## Troubleshooting
 If you encounter a "path too long" exception when building this project, close Visual Studio and rename the repository folder to a shorter name, then rebuild the project.
 
-For a step-by-step procedure, refer to the [How to Bind JSON, Excel, and CSV Data to MAUI SfSparkCharts?]() Knowledge Base article.
+For a step-by-step procedure, refer to the [How to Bind JSON, Excel, and CSV Data to MAUI SfSparkCharts?](https://support.syncfusion.com/kb/article/23165/how-to-bind-json-excel-and-csv-data-to-net-maui-sfsparkcharts) Knowledge Base article.
