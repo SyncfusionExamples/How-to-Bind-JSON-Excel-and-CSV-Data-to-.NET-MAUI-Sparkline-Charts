@@ -1,0 +1,106 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:sparkchart="clr-namespace:Syncfusion.Maui.Toolkit.SparkCharts;assembly=Syncfusion.Maui.Toolkit"
+             x:Class="BindDataFromDiffSource.MainPage"
+             Title=""
+             BackgroundColor="{DynamicResource PageBackgroundColor}">
+
+    <ScrollView>
+        
+        <VerticalStackLayout Padding="20" Spacing="30">
+            <Label Text="Syncfusion SparkChart - Bind Data from Different Sources" FontSize="Medium" FontAttributes="Bold"/>
+            <!-- JSON Data Source -->
+            <Border StrokeThickness="2"
+                    Stroke="{DynamicResource Primary}"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="{DynamicResource SecondaryBackgroundColor}"
+                    Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="1. JSON Data Source (Sales)"
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+
+                    <!-- SparkChart bound to JSON data -->
+                    <sparkchart:SfSparkLineChart ItemsSource="{Binding JsonData}"
+                                                  YBindingPath="Value"
+                                                  HeightRequest="100"
+                                                  Stroke="#FF6B35"
+                                                  StrokeWidth="3"
+                                                  ShowMarkers="True">
+                        <sparkchart:SfSparkLineChart.MarkerSettings>
+                            <sparkchart:SparkChartMarkerSettings Fill="#FF6B35"
+                                                                  Width="8"
+                                                                  Height="8"/>
+                        </sparkchart:SfSparkLineChart.MarkerSettings>
+                    </sparkchart:SfSparkLineChart>
+                    
+                    <Label Text="Month vs Sales"
+                           FontSize="12"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource Gray600}"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- CSV Data Source -->
+            <Border StrokeThickness="2"
+                    Stroke="{DynamicResource Primary}"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="{DynamicResource SecondaryBackgroundColor}"
+                    Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="2. CSV Data Source (Revenue)"
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+
+                    <!-- SparkChart bound to CSV data -->
+                    <sparkchart:SfSparkAreaChart ItemsSource="{Binding CsvData}"
+                                                  YBindingPath="Value"
+                                                  HeightRequest="100"
+                                                  Stroke="#4ECDC4"
+                                                  StrokeWidth="2"
+                                                  Fill="#804ECDC4"
+                                                  ShowMarkers="True">
+                        <sparkchart:SfSparkAreaChart.MarkerSettings>
+                            <sparkchart:SparkChartMarkerSettings Fill="#4ECDC4"
+                                                                  Width="10"
+                                                                  Height="10"/>
+                        </sparkchart:SfSparkAreaChart.MarkerSettings>
+                    </sparkchart:SfSparkAreaChart>
+                    
+                    <Label Text="Month vs Revenue"
+                           FontSize="12"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource Gray600}"/>
+                </VerticalStackLayout>
+            </Border>
+
+            <!-- Excel Data Source -->
+            <Border StrokeThickness="2"
+                    Stroke="{DynamicResource Primary}"
+                    StrokeShape="RoundRectangle 10"
+                    BackgroundColor="{DynamicResource SecondaryBackgroundColor}"
+                    Padding="15">
+                <VerticalStackLayout Spacing="10">
+                    <Label Text="3. Excel Data Source (Expenses)"
+                           FontSize="18"
+                           FontAttributes="Bold"/>
+
+                    <!-- SparkChart bound to Excel data -->
+                    <sparkchart:SfSparkColumnChart ItemsSource="{Binding ExcelData}"
+                                                    YBindingPath="Value"
+                                                    HeightRequest="100"
+                                                    Fill="#F7B731"/>
+
+
+                    <Label Text="Month vs Expenses"
+                           FontSize="12"
+                           HorizontalOptions="Center"
+                           TextColor="{DynamicResource Gray600}"/>
+                </VerticalStackLayout>
+            </Border>
+
+        </VerticalStackLayout>
+    </ScrollView>
+
+</ContentPage>
